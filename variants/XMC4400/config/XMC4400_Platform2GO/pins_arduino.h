@@ -78,6 +78,20 @@ extern uint8_t MOSI;
 extern uint8_t MISO;
 extern uint8_t SCK;
 
+// XMC_I2S defines
+/*U2C0*/
+/*DX0C -> P3.7*/
+/*SCLKOUT(ALT1) -> P3.9*/
+/*WA(ALT1) -> P3.10*/
+#define MASTER_CHANNEL      XMC_I2S2_CH0
+// master transmit slave receive
+#define MASTER_MTSR         PORT3, 8
+// master receive slave transmit
+#define MASTER_MRST         PORT3, 7
+#define INPUT_SOURCE        USIC2_C0_DX0_P3_7
+#define MASTER_SCLK         PORT3, 9
+#define MASTER_WACLK        PORT3, 10
+
 #define A0  0
 #define A1  1
 #define A2  2
