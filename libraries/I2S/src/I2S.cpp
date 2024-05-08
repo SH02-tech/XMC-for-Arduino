@@ -383,6 +383,11 @@ extern "C"
     {
         I2S._onSampleReceived();
     }
+#elif defined(XMC4400_Platform2GO)
+    void USIC1_2_IRQHandler()
+    {
+        I2S._onSampleReceived();
+    }
 #elif defined(XMC1100_XMC2GO) || defined(XMC1100_Boot_Kit)
     void USIC0_2_IRQHandler()
     {
