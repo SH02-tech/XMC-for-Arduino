@@ -83,14 +83,14 @@ extern uint8_t SCK;
 /*DX0C -> P3.7*/
 /*SCLKOUT(ALT1) -> P3.9*/
 /*WA(ALT1) -> P3.10*/
-#define MASTER_CHANNEL      XMC_I2S2_CH0
+#define MASTER_CHANNEL      XMC_I2S1_CH1
 // master transmit slave receive
 #define MASTER_MTSR         PORT3, 8
 // master receive slave transmit
-#define MASTER_MRST         PORT3, 7
-#define INPUT_SOURCE        USIC2_C0_DX0_P3_7
-#define MASTER_SCLK         PORT3, 9
-#define MASTER_WACLK        PORT3, 10
+#define MASTER_MRST         PORT0, 0
+#define INPUT_SOURCE        USIC1_C1_DX0_P0_0
+#define MASTER_SCLK         PORT1, 8
+#define MASTER_WACLK        PORT3, 5
 
 #define A0  0
 #define A1  1
