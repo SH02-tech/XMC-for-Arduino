@@ -441,6 +441,27 @@ XMC_I2C_t XMC_I2C_0 =
     .protocol_irq_service_request       	  = 2
 };
 
+// XMC_I2S instance
+XMC_I2S_t i2s_config = 
+{
+    .input_config = {
+        .mode = XMC_GPIO_MODE_INPUT_TRISTATE, 
+        .output_level = XMC_GPIO_OUTPUT_LEVEL_HIGH,
+        .input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD 
+    },
+    .sclk_config = {
+        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT7,
+        .output_level = XMC_GPIO_OUTPUT_LEVEL_HIGH,
+        .input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
+    },
+    .wa_config = {
+        .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT7, 
+        .output_level = XMC_GPIO_OUTPUT_LEVEL_HIGH,
+        .input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
+    },
+    .protocol_irq_num                        = (IRQn_Type) USIC0_2_IRQn,
+    .protocol_irq_service_request            = 2
+};
 
 // Serial Interrupt and event handling
 #ifdef __cplusplus
